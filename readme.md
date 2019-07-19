@@ -1,23 +1,24 @@
 # Descripción básica del proyecto 
-Agregar una descripción basica del proyecto 
+El proyecto tiene el fin de enseñar a personas adultas con poco conocimiento en el entorno de finanzas de una manera interactiva.
 
 # Fundamentación del proyecto 
-
-Agregar una fundamentacion breve del porqué se realiza el proyecto o que problematica soluciona 
+ ViruGame es un juego desarrollado con el fin de educar a personas  con poco conocimiento financiero  que  estan   llevando para atràs su economia. 
 
 
 # Integrantes del proyecto 
-* Nombre del primer integrante y @usuario en github
-* Nombre del segundo integrante y @usuario en github 
-* Nombre del tercer integrante,y @usuario en github y asi sucesivamente 
+* Jenny  Gimenez  @jerolede
+* Nora Escobar @Naea1996
+* Pedro Rodriguez @King 760
+* Felix Gonzalez @felixgonza
+* Nestor Ortiz @Nestor1991
 
 
 
 ## Requirimientos de software (Por ejemplo ) 
 
 * Python 3.6
-* Virtualenv
-* Flask 1.0.2 
+* Pygame
+* 
 
 ## Requerimientos de Hardware ( Por ejemplo ) 
 * Raspberry Pi
