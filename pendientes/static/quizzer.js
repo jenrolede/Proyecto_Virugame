@@ -41,6 +41,16 @@ var questions = [
 		"Rasmus Lerdorf",
 		2
 	],
+	[
+		"¿Quién disdfdffff  ?",
+		"Mark Zuckerberg",
+		"Bill Gates",
+		"Brendan Eich",
+		"Rasmus Lerdorf",
+		2
+	],
+ 
+
 ];
 
 // 2
