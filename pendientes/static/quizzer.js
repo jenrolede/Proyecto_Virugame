@@ -2,51 +2,51 @@
 // 1
 var questions = [
 	[
-		"¿Que se utiliza para estilizar un sitio web?",
-		"Javascript",
-		"CSS",
-		"PHP",
-		"AngularJS",
+		"Es la capacidad de entender como funciona el dinero, con la finalidad de tomar buenas decisiones",
+		"Educacion profesional",
+		"Educacion financiera",
+		"ahorro",
+		"Activos",
 		1
 	],
 	[
-		"¿Qué tipo de lenguaje es PHP?",
-		"Interpretado",
-		"Compilado",
-		"Los 2 anteriores",
+		"Todo aquello que te produce ingresos,ganancias,beneficios",
+		"Activos",
+		"Ahorro",
+		"pasivos",
 		"Ninguno de los anteriores",
 		0
 	],
 	[
-		"¿jQuery es una biblioteca para qué lenguaje?",
-		"Python",
-		"PHP",
-		"Java",
-		"Ninguno de los anteriores",
+		"Todo aquello que te produce gastos,deudas,etc.",
+		"Capital",
+		"Ahorro",
+		"Activos",
+		"Pasivos",
 		3
 	],
 	[
-		"¿Cómo se marca el inicio de código PHP?",
-		"&lt;?php",
-		"&lt;?",
-		"Los 2 anteriores",
+		"Es la accion de separar una parte de los ingresos con el fin de guardarlo para su uso en el futuro",
+		"Capital",
+		"Prestamo",
+		"Ahorro",
 		"Ninguno de los anteriores",
 		2
 	],
 	[
-		"¿Quién diseño Javascript?",
-		"Mark Zuckerberg",
-		"Bill Gates",
-		"Brendan Eich",
-		"Rasmus Lerdorf",
+		"Representa la totalidad del patrimonio de una persona",
+		"Activos",
+		"Patrimonio neto",
+		"Capital financiero",
+		"Ahorro",
 		2
 	],
 	[
-		"¿Quién disdfdffff  ?",
-		"Mark Zuckerberg",
-		"Bill Gates",
-		"Brendan Eich",
-		"Rasmus Lerdorf",
+		"Es la diferencia entre el Activo y el Pasivo",
+		"Cuenta",
+		"Deudas",
+		"Patrimonio neto",
+		"Gastos",
 		2
 	],
  
@@ -83,7 +83,7 @@ var points,
 	pointsPerQuestion,
 	currentQuestion,
 	questionTimer,
-	timeForQuestion = 8, // seconds
+	timeForQuestion = 20, // seconds
 	timeLeftForQuestion; 
 
 // 4
