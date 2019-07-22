@@ -1,44 +1,69 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  
-    <title>ViruGame</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="title" content="Reikuapy">
-    <link href="/static/quizzer.css" type="text/css" rel="stylesheet">
-    <script src="/static/jquery-2.2.0.min.js"></script>
-    <script src="/static/underscore-1.8.3.min.js"></script>
-    <script src="/static/quizzer.js"></script>
-  </head>
-  <body style="background-image: url('/static/logo.png')">
 
-    <header>
-      <div class="title">
-        
-        <h1>ViruGame</h1>
-        <h2>¿Sabes tanto como creías?</h2>
-      </div>
-      <div class="countdown"><span class="time_left">12s</span></div>
-      <div class="points"><span class="points">0 points</span></div>
-    </header>
-    <div class="start">
-      <div class="card">
-        <p>¿Listo para comenzar?</p>
-        <button class="start">Comenzar</button>
-      </div>
+<head>
+
+  <title>ViruGame</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="title" content="Reikuapy">
+  <link href="/static/quizzer.css" type="text/css" rel="stylesheet">
+  <script src="/static/jquery-2.2.0.min.js"></script>
+  <script src="/static/underscore-1.8.3.min.js"></script>
+  <script src="/static/quizzer.js"></script>
+  <script src="/static/audio.min.js"></script>
+  <script>
+    audiojs.events.ready(function () {
+   var aciertoElement= $('#acierto')
+   var errorElement= $('#error')
+   window.aciertoAudio = audiojs.create(aciertoElement)[0]
+   window.errorAudio = audiojs.create(errorElement)[0]
+ 
+    });
+  </script>
+  <style>.audiojs{
+    display: none !important;
+  }</style>
+</head>
+
+<body style="background-image: url('/static/logo.png')">
+
+  <audio autoplay src="/static/musica.mp3"></audio>
+  <audio id="acierto" preload="auto" src="/static/acierto2.mp3"></audio>
+  <audio id="error" preload="auto" src="/static/error.mp3"></audio>
+  <header>
+
+    <div class="title">
+
+
+      <h1>ViruGame</h1>
+      <h2>¿Sabes tanto como creías?</h2>
     </div>
-    <div class="play">
-      <div class="questions"></div>
+    <div class="countdown"><span class="time_left">12s</span></div>
+    <div class="points"><span class="points">0 points</span></div>
+  </header>
+  <div class="start">
+    <div class="card">
+      <p>¿Listo para comenzar?</p>
+      <button class="start">Comenzar</button>
     </div>
-    <div class="finish card">
-      <p class="times_up">¡Se acabó el tiempo!</p>
-      <p>Has obtenido</p>
-      <p class="final_points">8 puntos</p>
-      <div class="play_again">
-        <button>Volver a jugar</button>
-      </div>
+  </div>
+  <div class="play">
+    <div class="questions"></div>
+  </div>
+  <div class="finish card">
+    <p class="times_up">¡Se acabó el tiempo!</p>
+    <p>Has obtenido</p>
+    <p class="final_points">8 puntos</p>
+    <div class="play_again">
+      <button>Volver a jugar</button>
     </div>
-  </body>
+  </div>
+  <script>
+
+
+  </script>
+</body>
+
 </html>

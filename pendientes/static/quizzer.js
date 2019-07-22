@@ -1,5 +1,6 @@
 
 // 1
+var audio = document.getElementById("controlaudio"); //creamos el objeto para el control del audio 
 var questions = [
 	[
 		"Es la capacidad de entender como funciona el dinero, con la finalidad de tomar buenas decisiones",
@@ -7,7 +8,7 @@ var questions = [
 		"Educacion financiera",
 		"ahorro",
 		"Activos",
-		1
+		2
 	],
 	[
 		"Todo aquello que te produce ingresos,ganancias,beneficios",
@@ -15,7 +16,7 @@ var questions = [
 		"Ahorro",
 		"pasivos",
 		"Ninguno de los anteriores",
-		0
+		1
 	],
 	[
 		"Todo aquello que te produce gastos,deudas,etc.",
@@ -23,7 +24,7 @@ var questions = [
 		"Ahorro",
 		"Activos",
 		"Pasivos",
-		3
+		4
 	],
 	[
 		"Es la accion de separar una parte de los ingresos con el fin de guardarlo para su uso en el futuro",
@@ -31,7 +32,7 @@ var questions = [
 		"Prestamo",
 		"Ahorro",
 		"Ninguno de los anteriores",
-		2
+		3
 	],
 	[
 		"Representa la totalidad del patrimonio de una persona",
@@ -39,7 +40,7 @@ var questions = [
 		"Patrimonio neto",
 		"Capital financiero",
 		"Ahorro",
-		2
+		3
 	],
 	[
 		"Es la diferencia entre el Activo y el Pasivo",
@@ -47,7 +48,7 @@ var questions = [
 		"Deudas",
 		"Patrimonio neto",
 		"Gastos",
-		2
+		3
 	],
  
 
@@ -88,9 +89,11 @@ var points,
 
 // 4
 $(function() {
-
+	
+  //	audio.disabled=true  ;   //primero desabilitamos el audio 
 	// 
-	$('button.start').click(start);
+	$('audio.controlaudio').disabled=true  ;
+	$('button.start').click(start);  //inicia el juego 
 	$('.play_again button').click(restart);
 
 
@@ -111,6 +114,7 @@ $(function() {
 
 	// 
 	function start() {
+		$('audio.controlaudio').disabled=false ;  //za no esta desabilitado, deberia de reproducir el audio 
 		$('div.start').fadeOut(200, function() {
 			moveToNextQuestion();
 		});
@@ -181,14 +185,19 @@ $(function() {
 	// 
 	function optionSelected() {
 		var selected = parseInt(this.value);
-		var correct = questions[currentQuestion-1][5];
+		var correct = questions[currentQuestion-1][5]-1;
 
 		if (selected == correct) {
+			window.aciertoAudio.play()
 			points += pointsPerQuestion;
 			updatePoints();
 			correctAnimation();
+
 		} else {
-			wrongAnimation();
+			window.errorAudio.play()
+			var correctReply = questions[currentQuestion-1][correct+1]
+			wrongAnimation(correctReply);
+
 		}
 
 		if (currentQuestion == questions.length) {
@@ -204,8 +213,9 @@ $(function() {
 	}
 
 	// 
-	function wrongAnimation() {
+	function wrongAnimation(respuesta) {
 		animatePoints('wrong');
+		alert("Respuesta INCORRECTA, LA RESPUESTA ES: "+respuesta)
 	}
 
 	// 
