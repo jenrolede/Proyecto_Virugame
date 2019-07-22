@@ -11,12 +11,28 @@ var questions = [
 		2
 	],
 	[
+		"Que trampas hay que evitar?",
+		"Comprar un auto",
+		"Salir a todas las fiestas", 
+		"Muchas deudas en tarjeta de crèdito",
+		"Todas las anteriores son correctas",
+		4
+	],
+	[
 		"Todo aquello que te produce ingresos,ganancias,beneficios",
 		"Activos",
 		"Ahorro",
 		"pasivos",
 		"Ninguno de los anteriores",
 		1
+	],
+	[
+		"Cual es uno de los errores màs comunes de las finanzas personales?",
+		"Uso de targetas",
+		"No tienen fondos de emergencias",
+		"Gastan en cosas necesarias",
+		"Si llevan un control de gastos diarios ",
+		2
 	],
 	[
 		"Todo aquello que te produce gastos,deudas,etc.",
@@ -35,11 +51,27 @@ var questions = [
 		3
 	],
 	[
+		"Cual de estas opciones es una deuda buena?",
+		"Pedir prestamo para adquirir un Activo",
+		"Pedir un prestamo para invertir en un negocio",
+		"La deuda buena  hace crecer tu efectivo ",
+		"Todas las opciones son correctas",
+		4
+	],
+	[
 		"Representa la totalidad del patrimonio de una persona",
 		"Activos",
 		"Patrimonio neto",
 		"Capital financiero",
 		"Ahorro",
+		3
+	],
+	[
+		"Cuales son deudas malas. Seleciona las respuestas correctas",
+		"A)Pedir prestamo para adquirir un pasivo ",
+		"B)Pedir un prestamo para comprar un auto",
+		"A Y B son correctos",
+		"Ninguna es correcta",
 		3
 	],
 	[
