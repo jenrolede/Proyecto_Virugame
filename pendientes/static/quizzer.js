@@ -28,7 +28,7 @@ var questions = [
 	],
 	[
 		"Cual es uno de los errores màs comunes de las finanzas personales?",
-		"Uso de targetas",
+		"Uso de tarjetas",
 		"No tienen fondos de emergencias",
 		"Gastan en cosas necesarias",
 		"Si llevan un control de gastos diarios ",
@@ -220,21 +220,20 @@ $(function() {
 		var correct = questions[currentQuestion-1][5]-1;
 
 		if (selected == correct) {
-			window.aciertoAudio.play()
+			window.aciertoAudio.play();
 			points += pointsPerQuestion;
 			updatePoints();
 			correctAnimation();
 
 		} else {
-			window.errorAudio.play()
+			window.errorAudio.play();
 			var correctReply = questions[currentQuestion-1][correct+1]
 			wrongAnimation(correctReply);
-
 		}
 
 		if (currentQuestion == questions.length) {
 			clearTimeout(questionTimer);
-			return finish();
+			return finish(points);
 		}
 		moveToNextQuestion();
 	}
@@ -259,14 +258,17 @@ $(function() {
 	}
 
 	// 
-	function finish() {
+	function finish(puntaje) {
 		if (timeLeftForQuestion == 0) {
-			window.triunfoAudio.play();
 			$('.times_up').show();
 		}
-		$('p.final_points').html(points + ' puntos');
-		$('.question.card:visible').hide();
-		$('.finish.card').show();
+		
+			$('p.final_points').html(points + ' puntos');
+			$('.question.card:visible').hide();
+			$('.finish.card').show();
+		if (puntaje == 100){
+			window.trunfoAudio.play();
+		}
 	}
 
 	// 
