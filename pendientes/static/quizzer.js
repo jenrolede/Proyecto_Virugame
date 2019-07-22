@@ -95,7 +95,7 @@ $(function() {
 	$('audio.controlaudio').disabled=true  ;
 	$('button.start').click(start);  //inicia el juego 
 	$('.play_again button').click(restart);
-
+	$('')
 
 	function restart() {
 		points = 0;
@@ -104,7 +104,7 @@ $(function() {
 		timeLeftForQuestion = timeForQuestion;
 
 		$('.finish.card').hide();
-		$('div.start').show();
+		$('div.start').show(); 
 		$('.times_up').hide();
 
 		generateCards();
@@ -229,6 +229,7 @@ $(function() {
 	// 
 	function finish() {
 		if (timeLeftForQuestion == 0) {
+			window.triunfoAudio.play();
 			$('.times_up').show();
 		}
 		$('p.final_points').html(points + ' puntos');

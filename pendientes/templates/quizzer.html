@@ -8,6 +8,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="title" content="Reikuapy">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
   <link href="/static/quizzer.css" type="text/css" rel="stylesheet">
   <script src="/static/jquery-2.2.0.min.js"></script>
   <script src="/static/underscore-1.8.3.min.js"></script>
@@ -15,11 +22,13 @@
   <script src="/static/audio.min.js"></script>
   <script>
     audiojs.events.ready(function () {
-   var aciertoElement= $('#acierto')
-   var errorElement= $('#error')
-   window.aciertoAudio = audiojs.create(aciertoElement)[0]
-   window.errorAudio = audiojs.create(errorElement)[0]
- 
+        var aciertoElement= $('#acierto')//para reproducir audio
+        var errorElement= $('#error')
+        var triunfoElement= $('#triunfo')
+        window.aciertoAudio = audiojs.create(aciertoElement)[0]//para ocultar la barrA DE reproduccion
+        window.errorAudio = audiojs.create(errorElement)[0]
+        window.trunfoAudio = audiojs.create(triunfoElement)[0]
+
     });
   </script>
   <style>.audiojs{
@@ -32,6 +41,7 @@
   <audio autoplay src="/static/musica.mp3"></audio>
   <audio id="acierto" preload="auto" src="/static/acierto2.mp3"></audio>
   <audio id="error" preload="auto" src="/static/error.mp3"></audio>
+  <audio id="triunfo" preload="auto" src="/static/victoria1.mp3"></audio>
   <header>
 
     <div class="title">
